@@ -3,6 +3,6 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-def index(response):
-    return HttpResponse("Hello, this is the vet drug calculator")
+def index(request):
+    return render(request, "calculator/index.html")
 
