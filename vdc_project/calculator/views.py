@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import ViaAdministracion
+from .models import *
 # Create your views here.
 
-def index(request):
-    return render(request, "calculator/index.html")
+def layout(request):
+    return render(request, "calculator/layout.html", {
+        "medicamento" : Medicamento.objects.first()
+    })
 
