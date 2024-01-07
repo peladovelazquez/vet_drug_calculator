@@ -1,0 +1,33 @@
+body {
+    background-color: lightgray;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.container{
+    margin: 5px;
+    display: flex;
+}
+
+.app-container{
+    width: 600px;
+    min-height: 500px;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-container {
+    height: 20%;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    font-family: sans-serif;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}

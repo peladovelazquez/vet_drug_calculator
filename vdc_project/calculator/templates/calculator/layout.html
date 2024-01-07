@@ -1,22 +1,30 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{% static 'calculator/css/styles.css' %}"  rel="stylesheet">
+    <link href="{% static 'calculator/css/estilos.css' %}" rel="stylesheet">
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
     <div class="container">
         <div class="app-container">
             <div class="title-container">
-
+                <h1>
+                    Veterinary Drug Dossage Calculator
+                </h1>
             </div>
             <div class="form container">
-
+                <form class="form"  method="post">
+                    {% csrf_token %}
+                    <input type="text" name="peso" placeholder="Peso (Kg)">
+                    <input type="text" name="medicamento" placeholder="Medicamento">
+                    <button type="submit"> Calcular </button>
+                </form>
             </div>
-            <div class="result-container">
+            <div class="results">
 
             </div>
         </div>
