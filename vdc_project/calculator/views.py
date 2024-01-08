@@ -6,6 +6,7 @@ from .models import *
 
 def layout(request):
     return render(request, "calculator/layout.html", {
-        "medicamento" : Medicamento.objects.first()
+        "medicamentos" : Medicamento.objects.all(),
+        "especies" : Especie.objects.all()
     })
 
