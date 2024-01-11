@@ -29,7 +29,7 @@ def layout(request):
         "form" : form,
         "medicamento":medicamento,
         "volumenMinimo" : volumen_final_minimo,
-        "volumenMaximo" : volumen_final_maximo
+        "volumenMaximo" : volumen_final_maximo,
 
     })
 

@@ -17,16 +17,16 @@
                 <form method="POST" action="">
                     {% csrf_token %}
                     {{form}}
-                    <input id='submit' type="submit" value="submit">
+                    <input id='submit' type="submit" value="Calcular">
                 </form>
             </div>
         {% if medicamento %}
-        nombre: {{medicamento.nombre}} <br>
-        concentracion: {{medicamento.concentracion}} {{medicamento.unidad_concentracion}}<br>
-        dosis minima: {{medicamento.dosis_minima}} {{medicamento.unidad_dosis}}<br>
-        dosis maxima: {{medicamento.dosis_maxima}} {{medicamento.unidad_dosis}}<br>
-        volumen minimo final: {{volumenMinimo}} ml <br>
-        volumen maximo final: {{volumenMaximo}} ml
+        <b>{{medicamento.nombre}} ({{medicamento.concentracion}} {{medicamento.unidad_concentracion}})</b> <br>
+        <div>({{medicamento.dosis_minima}} {{medicamento.unidad_dosis}} - {{medicamento.dosis_maxima}} {{medicamento.unidad_dosis}})</div><br>
+        <b>Volumen mínimo final: <a style="color: red; font-size: large;">{{volumenMinimo}} ml 
+        ( {% for via in medicamento.vias_administracion.all %} {{via}} {% endfor %}) </a></b> <br>
+        <b>Volumen máximo final: <a style="color: red; font-size: large;">{{volumenMaximo}} ml
+        ( {% for via in medicamento.vias_administracion.all %} {{via}} {% endfor %})</a></b>
         {% endif %}
 
         </div>

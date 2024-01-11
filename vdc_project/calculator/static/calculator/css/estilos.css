@@ -77,6 +77,10 @@ form{
     width: 150px;
     margin: 20px;
     height: 35px;
+    background-color: rgb(60, 187, 230);
+    color: white;
+    font-size: large;
+    border-color: aliceblue;
 }
 
 .form label {
@@ -115,6 +119,7 @@ input:hover{
     background-color: white;
     font-size: medium;
     border-width: 1.5px;
+
 }
 .submit:hover{
     box-shadow: 2px 2px 6px lightgray;
