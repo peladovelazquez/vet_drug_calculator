@@ -21,7 +21,7 @@
                 </form>
             </div>
         {% if medicamento %}
-        <b>{{medicamento.nombre}} ({{medicamento.concentracion}} {{medicamento.unidad_concentracion}})</b> <br>
+        <b style="text-transform: capitalize;">{{medicamento.nombre}} ({{medicamento.concentracion}} {{medicamento.unidad_concentracion}})</b> <br>
         <div>({{medicamento.dosis_minima}} {{medicamento.unidad_dosis}} - {{medicamento.dosis_maxima}} {{medicamento.unidad_dosis}})</div><br>
         <b>Volumen mínimo final: <a style="color: red; font-size: large;">{{volumenMinimo}} ml 
         ( {% for via in medicamento.vias_administracion.all %} {{via}} {% endfor %}) </a></b> <br>
