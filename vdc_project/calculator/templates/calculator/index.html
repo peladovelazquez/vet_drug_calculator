@@ -1,10 +1,43 @@
-{% extends "calculator/layout.html" %}
+<div class="container">
+    <div>
+        <h1 style="font-family: sans-serif;">Veterinary Drug Dossage Calculator</h1>
+    </div>
 
-{%block title%} Home {% endblock %}
+    <div class="app-container">      
+        <div class="form container">
+            <form class="form" action="{% url 'index' %}" method="post">
+                {% csrf_token %}
+                <label for="especie">Seleccione la especie</label>
+                <select id="especie" class="dropdown" name="especie">
+                    <option>Especie</option>
+                    {% for especie in especies %}
+                        <option value="{{especie.nombre}}">{{especie.nombre}}</option>
+                    {% endfor %}
+                </select>
 
-{% block body%}
-    <h2> Esto es una prueba</h2>
-    <h3> el medicamento {{ medicamento.nombre}} tiene una concentracion de {{ medicamento.concentracion}} {{ medicamento.unidad_concentracion}}
-        y una unidad de dosis {{medicamento.unidad_dosis}}
-    </h3>
-{% endblock %}
+                <label for='peso'>Indique el peso</label>
+                <input type="text" name="peso" placeholder="Peso (Kg)">
+
+                <label for="medicamento">Indique el medicamento</label>
+                <select id="medicamento" class="dropdown" name="medicamento" >
+                    <option>Seleccione el medicamento</option>
+                    {% for medicamento in medicamentos %}
+                        <option id="{{medicamento.nombre}}"  value="{{medicamento.nombre}}">{{medicamento.nombre}}, {{medicamento.concentracion}}{{medicamento.unidad_concentracion}}</option>
+                    {% endfor%}
+                </select>
+
+                <button type="submit"> Calcular </button>
+            </form>
+            <div class="resultado" >
+                {% if resultado %}
+                   {{resultado.nombre}} 
+                   {{peso}}
+                   {{especie.nombre}}
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</div>
+{% block body%} 
+{%endblock%}

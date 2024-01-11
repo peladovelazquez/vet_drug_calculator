@@ -14,17 +14,17 @@ body {
 }
 
 .app-container{
-    margin-top: 30px;
-    padding-top: 60px;
-    padding-bottom: 20px;
-    width: 600px;
+    margin-top: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 500px;
     min-height: 400px;
     background-color: white;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 3px 3px lightgray;
+    justify-content: center;
     --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* sacado de inspeccion de google  */
     --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -32,60 +32,91 @@ body {
 }
 
 .title-container {
-    height: 20%;
+    height: 10%;
     text-align: center;
     justify-content: center;
     color: black;
     font-family: sans-serif;
 }
 
+form{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 100%;
+    height: 100%;
 }
 
-label{
-    margin: 4px;
-    margin-top: 20px;
+.form select {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 250px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border-radius: 10px;
+}
+
+
+.form select:hover {
+    box-shadow: 2px 2px 6px lightgray;
+}
+
+
+#submit {
+    width: 150px;
+    margin: 20px;
+    height: 35px;
+}
+
+.form label {
+    display: flex;
+    width: 60%;
+    height: 30px;
     font-family: sans-serif;
     font-size: large;
-    align-self: self-start;
-    margin-left: 30px;
+    justify-content: start;
+    align-items: center;
+    margin-top: 10px;
 }
 
-input{
-    margin: 10px 4px;
-    width: 80%;
-    height: 35px;
+.form input{
+    display: flex;
+    width: 245px;
+    height: 34px;
     border-radius: 10px;
-    padding-left: 10px;
+    border-width: thin;
+    justify-content: center;
+    margin-top: 4px;
+    padding-left: 5px;
+
 }
 input:hover{
     box-shadow: 2px 2px 6px lightgray;
 
 }
 
-.dropdown {
-    width: 85%;
+
+
+.submit {
     height: 40px;
-    border-radius: 10px;
-    padding-left: 10px;
-    margin-top: 10px;
+    width: 50px;
+    border-radius: 7px;
+    background-color: white;
+    font-size: medium;
+    border-width: 1.5px;
 }
-.dropdown:hover{
+.submit:hover{
     box-shadow: 2px 2px 6px lightgray;
 }
 
-button {
-    margin-top: 40px;
-    height: 40px;
-    width: 150px;
-    border-radius: 5px;
-    background-color: white;
-    font-size: medium;
-}
-button:hover{
-    box-shadow: 2px 2px 6px lightgray;
-}
